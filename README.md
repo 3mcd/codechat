@@ -17,3 +17,9 @@ bower install --save suit
 
 bower install --save suit-grid-layouts
 ```
+
+You'll probably need to update the liveDB backend, as well:
+
+```
+npm update
+```
