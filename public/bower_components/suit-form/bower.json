@@ -1,0 +1,29 @@
+{
+    "name": "suit-form",
+    "description": "",
+    "version": "0.0.0",
+    "main": "form.css",
+    "dependencies": {
+        "normalize-css": "*"
+    },
+    "devDependencies": {
+        "suit-test": "*",
+        "suit-utils-dimension": "*",
+        "suit-utils-display": "*",
+        "suit-utils-offset": "*",
+        "suit-utils-state": "*",
+        "suit-utils-text": "*",
+        "suit-arrange": "*",
+        "suit-button": "*",
+        "suit-grid": "*"
+    },
+    "ignore": [
+        "test",
+        ".*",
+        "Makefile",
+        "CHANGELOG.md",
+        "component.json",
+        "package.json",
+        "test.html"
+    ]
+}

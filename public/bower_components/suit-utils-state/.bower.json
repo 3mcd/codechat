@@ -1,0 +1,23 @@
+{
+  "name": "suit-utils-state",
+  "version": "0.2.1",
+  "author": "Nicolas Gallagher",
+  "main": "state.css",
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ],
+  "homepage": "https://github.com/suitcss/utils-state",
+  "_release": "0.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.1",
+    "commit": "32039aea55865876f81a2c8d87488d3bac6cf018"
+  },
+  "_source": "git://github.com/suitcss/utils-state.git",
+  "_target": "~0.2.1",
+  "_originalSource": "suit-utils-state"
+}

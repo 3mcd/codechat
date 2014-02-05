@@ -1,0 +1,23 @@
+{
+  "name": "suit-utils-text",
+  "version": "0.2.3",
+  "author": "Nicolas Gallagher",
+  "main": "text.css",
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ],
+  "homepage": "https://github.com/suitcss/utils-text",
+  "_release": "0.2.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.3",
+    "commit": "85a72f9529de62c25874bde05f57e997c21a00d1"
+  },
+  "_source": "git://github.com/suitcss/utils-text.git",
+  "_target": "~0.2.3",
+  "_originalSource": "suit-utils-text"
+}

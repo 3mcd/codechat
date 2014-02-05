@@ -1,0 +1,10 @@
+{
+    "name": "suit-utils-space",
+    "version": "0.1.2",
+    "author": "Nicolas Gallagher",
+    "main": "space.css",
+    "ignore": [
+        "CHANGELOG.md",
+        "test.html"
+    ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "suit-utils-dimension",
+  "version": "0.5.0",
+  "author": "Nicolas Gallagher",
+  "main": [
+    "dimension.css",
+    "dimension-v1.css",
+    "dimension-v2.css",
+    "dimension-v3.css"
+  ],
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ],
+  "homepage": "https://github.com/suitcss/utils-dimension",
+  "_release": "0.5.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.5.0",
+    "commit": "724aa2c1436ffbaa0b53c681c5539ee4f8b35eb2"
+  },
+  "_source": "git://github.com/suitcss/utils-dimension.git",
+  "_target": "~0.5.0",
+  "_originalSource": "suit-utils-dimension"
+}

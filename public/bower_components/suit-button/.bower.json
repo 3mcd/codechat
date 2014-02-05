@@ -1,0 +1,26 @@
+{
+  "name": "suit-button",
+  "version": "3.0.0",
+  "author": "Nicolas Gallagher",
+  "main": "button.css",
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ],
+  "devDependencies": {
+    "suit-test": "*"
+  },
+  "homepage": "https://github.com/suitcss/button",
+  "_release": "3.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.0",
+    "commit": "e73da17f01c3be25ce3b4640ea44fdf88fc94b95"
+  },
+  "_source": "git://github.com/suitcss/button.git",
+  "_target": "~3.0.0",
+  "_originalSource": "suit-button"
+}

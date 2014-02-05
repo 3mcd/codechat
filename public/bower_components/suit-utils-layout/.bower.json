@@ -1,0 +1,23 @@
+{
+  "name": "suit-utils-layout",
+  "version": "0.2.1",
+  "author": "Nicolas Gallagher",
+  "main": "layout.css",
+  "ignore": [
+    ".*",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ],
+  "homepage": "https://github.com/suitcss/utils-layout",
+  "_release": "0.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.1",
+    "commit": "901d07094a38308f56e3c7214c61491f240ad70a"
+  },
+  "_source": "git://github.com/suitcss/utils-layout.git",
+  "_target": "~0.2.1",
+  "_originalSource": "suit-utils-layout"
+}

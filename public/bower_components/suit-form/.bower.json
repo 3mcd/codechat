@@ -1,0 +1,39 @@
+{
+  "name": "suit-form",
+  "description": "",
+  "main": "form.css",
+  "dependencies": {
+    "normalize-css": "*"
+  },
+  "devDependencies": {
+    "suit-test": "*",
+    "suit-utils-dimension": "*",
+    "suit-utils-display": "*",
+    "suit-utils-offset": "*",
+    "suit-utils-state": "*",
+    "suit-utils-text": "*",
+    "suit-arrange": "*",
+    "suit-button": "*",
+    "suit-grid": "*"
+  },
+  "ignore": [
+    "test",
+    ".*",
+    "Makefile",
+    "CHANGELOG.md",
+    "component.json",
+    "package.json",
+    "test.html"
+  ],
+  "homepage": "https://github.com/suitcss/form",
+  "_release": "cb770f6b5a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "cb770f6b5a938fbe12acbc9ab23f4d3953875d8a"
+  },
+  "_source": "git://github.com/suitcss/form.git",
+  "_target": "*",
+  "_originalSource": "suit-form",
+  "_direct": true
+}

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   SUIT form
+   ========================================================================== */
+
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications. Removes the default spacing and border for
+ * appropriate elements.
+ */
+
+.Form {}
+
+.Form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.Form label,
+.Form input,
+.Form textarea,
+.Form select {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Form--inline .Form-item {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.Form-item {
+    margin: 0 0 1em;
+}
+
+.Form-item--stacked .Form-label {
+    display: block;
+}
+
+.Form-input {
+    border: 1px solid #000;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.5em 0.6em;
+}
+
+/**
+ * Override the normalize.css search input `box-sizing` normalization.
+ */
+
+.Form-input[type="search"] {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/**
+ * Add a basic focus style because Firefox removes the default focus style when
+ * the unfocused input has an explicit border color set.
+ */
+
+.Form-input:focus {
+    border-color: #1980ce;
+}
