@@ -5,9 +5,9 @@ A collaborative chat application with a real time code interface built with Derb
 Install into your Derby project. You also need to install bower to install the SUITCSS dependencies and jQuery. From the root derby project directory:
 
 ```
-cd public/
+npm install -g bower
 
-npm install bower
+cd public/
 ```
 
 and then (inside of the public directory):
