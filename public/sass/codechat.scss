@@ -1,0 +1,51 @@
+/*! suit-code-chat v0.1 | github.com/ericmcdaniel/codechat */
+
+/* ==========================================================================
+   SUIT: Code chat
+   ========================================================================== */
+
+/**
+ * Code chat
+ *
+ * 1. 
+ *    
+ */
+
+/**
+ * Code chat
+ *
+ * 1. 
+ *    
+ */
+
+.CodeChat {
+	height: 100%;
+}
+
+.CodeChat-main {
+	height: 100%;
+}
+
+.CodeChat-code {
+	height: 100%;
+	border-right: 1px solid #ccc;
+}
+
+.CodeChat-codeArea {
+	width: 1em;
+	height: 100%;
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+}
+
+.js-codeArea {
+	width: 400px;
+}
+
+.CodeChat-codeArea > textarea {
+	font-size: 0.75em;
+	font-family: 'PT Mono', monospace;
+	padding: 0.5em;
+	width: 400px;
+	height: 100%;
+}

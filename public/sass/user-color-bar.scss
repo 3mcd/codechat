@@ -1,0 +1,31 @@
+/*! suit-user-color-bar v0.1 | github.com/ericmcdaniel/codechat */
+
+/* ==========================================================================
+   SUIT: User color
+   ========================================================================== */
+
+/**
+ * User color component for codechat
+ *
+ * 1. 
+ *    
+ */
+
+/**
+ * User color item
+ *
+ * 1. 
+ *    
+ */
+
+@for $i from 0 to $num-colors {
+	.UserColorBar--#{$i} {
+		border-left: 0.5em solid adjust-hue($base-color, $offset + $spectrum / $num-colors * $i);
+	}
+}
+
+@for $i from 0 to $num-colors {
+	.UserColorBar--nested#{$i} {
+		border-left: 0.5em solid adjust-hue($base-color-trimmed, $offset + $spectrum / $num-colors * $i);
+	}
+}

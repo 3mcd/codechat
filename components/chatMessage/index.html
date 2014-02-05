@@ -1,0 +1,15 @@
+<chatMessage:>
+	{{#if trimmed}}
+	<div class="ChatMessage UserColorBar--nested{users[userId].userColor}">
+	{{else}}
+	<div class="ChatMessage UserColorBar--{users[userId].userColor}">
+	{{/}}
+		<div class="ChatMessage-contents">
+			{{#if trimmed}}
+				<div class="ChatMessage-comment">{{comment}}</div>
+			{{else}}
+				<div class="ChatMessage-user">{users[userId].name}:</div>
+				<div class="ChatMessage-comment">{{comment}}</div>
+			{{/}}
+		</div>
+	</div>

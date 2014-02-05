@@ -1,0 +1,27 @@
+{
+  "author": "Ilkka Huotari <ilkkah@gmail.com>",
+  "name": "derby-ui-modal",
+  "description": "Derby ui component library / modal",
+  "version": "0.0.6",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ile/derby-ui-modal.git"
+  },
+  "private": false,
+  "main": "lib/index",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "coffee-script": ">=1.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "derby",
+    "ui",
+    "modal",
+    "node"
+  ]
+}

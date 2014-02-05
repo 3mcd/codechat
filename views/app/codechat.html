@@ -1,0 +1,94 @@
+<Head:>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/base.css" />
+  <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+
+<Header:>
+  <body>
+  <div class="CodeChat Arrange">
+    <div class="CodeChat-main Arrange-sizeFill">
+          <ui:connectionAlert>
+          <header class="Header">
+            <div class="Header-nav">
+              <!-- Other templates are included like HTML elements -->
+              <app:navLink title="Home" href="/">
+              <app:navLink title="Lobby" href="/codechat">
+              <a x-bind="click:modal.commandDialog.show">Commands</a>
+              <cc:classButton class="codeToggle" data-target="CodeChat-codeArea" data-target-class="js-codeArea" data-class="js-navActive">
+              <form x-bind="submit: changeRoom">
+                <input value="{_page.newRoom}" class="Header-search UserColorBar--{_page.user.userColor}" placeholder="Current room: '{_page.room}'">
+              </form>
+            </div>
+          </header>
+
+<Body:>
+    	<cc:chatPanel messages="{_page.messages}">
+    	<cc:codeWindow room="{_page.room}">
+<Footer:>
+      <footer class="Footer">
+        <cc:dataBar>
+      </footer>
+</div>
+<div class="CodeChat-code Arrange-sizeFit">
+      <!-- Need to change this to it's own CodeArea component -->
+      <div class="CodeChat-codeArea">
+        <textarea>{_page.code}</textarea>
+      </div>
+    </div>
+</div>
+
+<Scripts:>
+  <script src="/bower_components/jquery/jquery.min.js"></script>
+  <script>
+    var codeToggle = function() {
+      $('.codeToggle').toggleClass('js-navActive');
+      $('.CodeChat-codeArea').toggleClass('js-codeArea');
+      return $('.js-codeArea > textarea').focus();
+    };
+    $('.CodeChat-codeArea > textarea').focus(function() {
+      $('.codeToggle').addClass('js-navActive');
+      return $('.CodeChat-codeArea').addClass('js-codeArea');
+    });
+    $(window).keydown(function(e) {
+      if (e.which == '220' && !($("input, textarea").is(":focus"))) {
+        e.preventDefault();
+        return codeToggle();
+      } else if(e.which == '191' && !($("input, textarea").is(":focus"))) {
+        e.preventDefault();
+        return $('.DataBar-comment').focus();
+      }
+    });
+    $(document).delegate('.js-codeArea > textarea', 'keydown', function(e) {
+      var keyCode = e.keyCode || e.which;
+      if (keyCode == 9) {
+        e.preventDefault();
+        var start = $(this).get(0).selectionStart;
+        var end = $(this).get(0).selectionEnd;
+        $(this).val($(this).val().substring(0, start)
+                    + "    " 
+                    + $(this).val().substring(end));
+        $(this).get(0).selectionStart =
+        $(this).get(0).selectionEnd = start + 4;
+      }
+    });
+  </script>
+
+<navLink:>
+  <a class="{{#if equal($url, @href)}}active{{/}}" href="{{@href}}">{{@title}}</a>
+
+<ui2:modal bind="create:modal.create" name="commandDialog" keydown>
+  <h2>codechat commands</h2>
+  <br>
+  <h3>/room <em>name</em></h3>
+  <p>Navigate to a room.</p>
+  <br>
+  <h3>/refresh</h3>
+  <p>Refresh code in the code window. Use this command after making script changes or running <em>/empty</em>.</p>
+  <br>
+  <h3>/empty</h3>
+  <p>Empty code in the current room.</p>
+  <br>
+  <b>Hit 'ESC' to close this window.</b>
+</ui2:modal>
