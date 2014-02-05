@@ -10,7 +10,7 @@ cd public/
 npm install bower
 ```
 
-and then:
+and then (inside of the public directory):
 
 ```
 bower install --save suit
