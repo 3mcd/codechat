@@ -32,7 +32,7 @@
 }
 
 .CodeChat-codeArea {
-	width: 1em;
+	width: 1px;
 	height: 100%;
 	overflow: hidden;
 	transition: all 0.3s ease-out;
@@ -49,4 +49,12 @@
 	padding: 0.5em;
 	width: 400px;
 	height: 33%;
+	border: 0;
+	background-color: #f6f6f6;
+	resize: none;
+}
+
+.CodeChat-codeArea > textarea:hover {
+	background-color: #e6e6e6;
+	color: #222;
 }

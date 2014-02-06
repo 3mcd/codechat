@@ -33,7 +33,7 @@
 </div>
 <div class="CodeChat-code Arrange-sizeFit">
       <!-- Need to change this to it's own CodeArea component -->
-      <div class="CodeChat-codeArea">
+      <div class="CodeChat-codeArea UserColorBar--{_page.user.userColor}">
         <cc:codeArea path="{_page.code.html}">
         <cc:codeArea path="{_page.code.css}">
         <cc:codeArea path="{_page.code.js}">
@@ -47,7 +47,6 @@
     var codeToggle = function() {
       $('.codeToggle').toggleClass('js-navActive');
       $('.CodeChat-codeArea').toggleClass('js-codeArea');
-      return $('.js-codeArea > textarea').focus();
     };
     $('.CodeChat-codeArea > textarea').focus(function() {
       $('.codeToggle').addClass('js-navActive');
