@@ -5,7 +5,8 @@ var config = {
 	, scripts: {
 		codeWindow: require('./codeWindow'),
 		chatPanel: require('./chatPanel'),
-		classButton: require('./classButton')
+		classButton: require('./classButton'),
+		codeArea: require('./codeArea')
 	}
 };
 
