@@ -1,10 +1,10 @@
 <chatPanel:>
 	<div x-as="chatpanel" class="ChatPanel Grid v2-Grid--fitToFill">
-		<div class="ChatPanel-usersWindow Grid-cell Grid-cell--1">
+<!-- 		<div class="ChatPanel-usersWindow Grid-cell Grid-cell--1">
 			{#each _page.trueUsers as :user}
 				<div class="UserColorBar--{:user.userColor} ChatPanel-user">{:user.name}</div>
 			{/}
-		</div>
+		</div> -->
 		<div x-as="chatwindow" class="ChatPanel-chatWindow Grid-cell Grid-cell--2">
 			{#each :self._messages}
 				<lib:chatMessage>
