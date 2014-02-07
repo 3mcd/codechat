@@ -1,15 +1,26 @@
 <chatMessage:>
-	{{#if trimmed}}
+	{{#if server}}
+		<div class="ChatMessage UserColorBar--10">
+			<div class="ChatMessage-contents">
+				<div class="ChatMessage-comment">
+					{{#if user}}
+						{users[user].name}
+					{{/}}
+					{{comment}}
+				</div>
+			</div>
+		</div>
+	{{else if trimmed}}
 	<div class="ChatMessage UserColorBar--nested{users[userId].userColor}">
-	{{else}}
-	<div class="ChatMessage UserColorBar--{users[userId].userColor}">
-	{{/}}
 		<div class="ChatMessage-contents">
-			{{#if trimmed}}
 				<div class="ChatMessage-comment">{{comment}}</div>
-			{{else}}
-				<div class="ChatMessage-user">{users[userId].name}:</div>
-				<div class="ChatMessage-comment">{{comment}}</div>
-			{{/}}
 		</div>
 	</div>
+	{{else}}
+	<div class="ChatMessage UserColorBar--{users[userId].userColor}">
+		<div class="ChatMessage-contents">
+			<div class="ChatMessage-user">{users[userId].name}:</div>
+			<div class="ChatMessage-comment">{{comment}}</div>
+		</div>
+	</div>
+	{{/}}
