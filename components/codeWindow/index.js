@@ -7,10 +7,5 @@ exports.init = function(model) {
 // The create function is called after the component is created
 // and has been added to the DOM. It only runs in the browser
 exports.create = function(model, dom) {        
-    var self = this, 
-        room;
-
-    room = model.get('room');
-
-    return model.set('_room', room);
+    var self = this;
 }
