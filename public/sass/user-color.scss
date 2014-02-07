@@ -18,6 +18,10 @@
  *    
  */
 
+.UserColor--10 {
+	border-left: 0.5em solid black;
+}
+
 @for $i from 0 to $num-colors {
 	.UserColor--#{$i} {
 		border-left: 0.4em solid adjust-hue($base-color, $offset + $spectrum / $num-colors * $i);

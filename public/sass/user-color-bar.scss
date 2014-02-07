@@ -18,6 +18,11 @@
  *    
  */
 
+ .UserColorBar--10 {
+	border-left: 0.6em solid black;
+}
+
+
 @for $i from 0 to $num-colors {
 	.UserColorBar--#{$i} {
 		border-left: 0.5em solid adjust-hue($base-color, $offset + $spectrum / $num-colors * $i);
