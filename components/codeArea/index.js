@@ -10,8 +10,6 @@ exports.create = function(model, dom) {
 	var path, self = this;
 
 	path = model.get('path');
-
-	title = model.get('title');
-	model.set('_title', title);
+	
 	return model.ref('_code', 'path');
 }
