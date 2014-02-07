@@ -29,5 +29,15 @@ bower install jquery
 You may need to update the liveDB backend, as well:
 
 ```bash
+cd ..
+
 npm update
 ```
+
+Finally:
+
+```bash
+npm start
+```
+
+Navigate to localhost:3000/ to access the client application.
