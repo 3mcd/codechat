@@ -10,19 +10,14 @@ exports.create = function(model, dom) {
     var self = this;
 
     target = model.get('data-target');
-    model.set('_target', target);
-
+    targetCls = model.get('data-target-class');
     cls = model.get('class');
-    model.set('_cls', cls);
-
-    target_cls = model.get('data-target-class');
-    model.set('_target_cls', target_cls);
 
     this.button = dom.element('classbutton');
 
     this.button.addEventListener('click', function(e) {
         e.preventDefault();
     	$(self.button).toggleClass(cls);
-    	$('.'+target).toggleClass(target_cls);
+    	$('.'+target).toggleClass(targetCls);
     });
 }
