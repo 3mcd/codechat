@@ -6,7 +6,11 @@
 
 A collaborative chat application with a real time code interface built with Derby JS and SUIT CSS components. In order to set this project up you will need the dependencies for Derby including Redis and MongoDB.
 
-Clone into a directory, `npm install`, `npm start`
+Note: there is a bug currently that sometimes prevents you from going to new rooms from the command line/room input. If you experience this, you can simply go the the URL localhost:3000/codechat/{room} in your browser.
+
+##Install
+
+Clone into a directory and run: `npm install`, `npm start`
 
 Navigate to localhost:3000/ to access the client application.
 
