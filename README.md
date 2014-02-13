@@ -65,6 +65,9 @@ ex: `/server "There really is no need for this command"` would emit "There reall
 ##Keybindings
 
 ' / '     - Code Editor
+
 ' . '     - Expand Code Panel
+
 ' , '     - Expand Chat Panel
+
 ' Enter ' - Focus Command Input
