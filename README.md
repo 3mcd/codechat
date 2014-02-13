@@ -1,8 +1,6 @@
-# codechat
+#codechat
 
 A collaborative chat application with a real time code interface built with Derby JS and SUIT CSS components. In order to set this project up you will need the dependencies for Derby including Redis and MongoDB.
-
-![codechat ui](http://www.ericmcd.com/blog/img/codechat-new.jpg)
 
 Clone into a directory, `npm install`, `npm start`
 
@@ -59,3 +57,7 @@ ex: `/color 0` = burnt orange, `/color 4` = green, `/color 9` = light blue.
 Echo a userless server message to the current room.
 
 ex: `/server "There really is no need for this command"` would emit "There really is no need for this command" to the current room.
+
+##Screenshot
+
+![codechat ui](http://www.ericmcd.com/blog/img/codechat-new.jpg)
