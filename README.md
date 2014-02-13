@@ -61,3 +61,10 @@ ex: `/color 0` = burnt orange, `/color 4` = green, `/color 9` = light blue.
 Echo a userless server message to the current room.
 
 ex: `/server "There really is no need for this command"` would emit "There really is no need for this command" to the current room.
+
+##Keybindings
+
+' / '     - Code Editor
+' . '     - Expand Code Panel
+' , '     - Expand Chat Panel
+' Enter ' - Focus Command Input
