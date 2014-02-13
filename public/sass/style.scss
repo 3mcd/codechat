@@ -1,0 +1,40 @@
+/* Variables */
+$num-colors: 10;
+$base-color: #c24;
+$base-color-trimmed: #9E1934;
+$spectrum: 180deg;
+$offset: 30deg;
+
+/* Normalize */
+@import "../bower_components/normalize-css/normalize.css";
+/* Variables */
+$num-colors: 10;
+$base-color: #c24;
+$base-color-dark: #9E1934;
+$spectrum: 180deg;
+$offset: 30deg;
+
+/* CodeChat Base */
+@import "base";
+
+/* SUIT CSS */
+@import "../bower_components/suit-base/base.css";
+@import "../bower_components/suit-button/button.css";
+@import "../bower_components/suit-form/form.css";
+
+/* CodeChat Components*/
+@import "./components/code-chat";
+@import "./components/header";
+
+@import "./components/footer";
+@import "./components/command-bar";
+
+@import "./components/chat-panel";
+@import "./components/user-list";
+@import "./components/chat-message";
+@import "./components/code-panel";
+
+@import "./components/user-color-bar";
+@import "./components/user-color-border";
+
+@import "./components/modal";

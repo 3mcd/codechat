@@ -3,10 +3,11 @@ var config = {
 	styles: '../styles/components',
 	filename: __filename
 	, scripts: {
-		codeWindow: require('./codeWindow'),
+		editor: require('./editor'),
 		chatPanel: require('./chatPanel'),
 		classButton: require('./classButton'),
-		codeArea: require('./codeArea')
+		codeArea: require('./codeArea'),
+		commandBar: require('./commandBar')
 	}
 };
 

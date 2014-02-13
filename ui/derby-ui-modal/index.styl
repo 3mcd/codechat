@@ -1,7 +1,7 @@
 .derby-ui-modal-wrapper
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	z-index: 1030;
 
 .derby-ui-modal-backdrop
@@ -20,14 +20,13 @@
 
 .ui-modal
 	position: fixed;
-	top: 25%;
-	left: 50%;
+	top: 15%;
+	left: 20%;
 	z-index: 1050;
-	width: 560px;
-	height: 50%;
+	width: 60%;
+	height: 60%;
 	overflow: auto;
 	overflow-x: hidden;
-	margin-left: -280px;
 	background-color: #000;
 	background: rgba(255,255,255,0.95);
 	color: #000;
@@ -41,7 +40,8 @@
 	-moz-background-clip: padding-box;
 	background-clip: padding-box;
 	outline: none;
-	padding: 1px;
+	padding: 1em;
+	max-height: 600px;
 	-webkit-animation: 0.5s modal_appear ease-out
 	-moz-animation: 0.5s modal_appear ease-out
 	-o-animation: 0.5s modal_appear ease-out
@@ -58,12 +58,10 @@
 		width: 100%
 		height: 100%
 		display: block
-		padding: 10px
 		-webkit-border-radius:4px;
 		-moz-border-radius:4px;
 		border-radius: 4px;
 		box-sizing: border-box
-		max-height: 500px;
 		overflow: auto;
 
 @keyframes backdrop_appear {

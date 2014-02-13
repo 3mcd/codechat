@@ -1,0 +1,13 @@
+.cc-CodePanel {
+	flex: 6;
+	background: #e6e6e6;
+	-webkit-box-shadow: inset 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    inset 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+	box-shadow:         inset 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+	transition: all 0.2s ease-out;
+	display: flex;
+}
+
+.cc-CodePanel-iframe {
+	flex: 1;
+}

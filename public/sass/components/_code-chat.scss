@@ -1,0 +1,47 @@
+/* SUIT CSS Component */
+
+.cc-CodeChat {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+	min-width: 600px;
+	min-height: 360px;
+}
+
+.cc-CodeChat-main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	flex: 3;
+}
+
+.cc-CodeChat-editor {
+	display: flex;
+	flex-direction: column;
+	flex: 0;
+	overflow: hidden;
+	transition: all 0.2s ease-out;
+}
+
+.cc-CodeChat-editor > textarea {
+	flex: 1;
+	resize: none;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	padding: 0.5em;
+	width: 100%;
+	height: 33%;
+	transition: all 0.2s ease-out;
+	font-family: 'PT Mono', monospace;
+	font-size: 0.85em;
+	color: #666;
+}
+
+.cc-CodeChat-editor > textarea:focus {
+	-webkit-box-shadow: inset 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    inset 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+	box-shadow:         inset 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+	flex: 2;
+	color: #000;
+}

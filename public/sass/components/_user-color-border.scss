@@ -1,0 +1,15 @@
+.cc-UserColorBorder--10 {
+	border-color: black !important;
+}
+
+@for $i from 0 to $num-colors {
+	.cc-UserColorBorder--#{$i} {
+		border-color: adjust-hue($base-color, $offset + $spectrum / $num-colors * $i) !important;
+	}
+}
+
+@for $i from 0 to $num-colors {
+	.cc-UserColorBorder--dark#{$i} {
+		border-color: adjust-hue($base-color-dark, $offset + $spectrum / $num-colors * $i) !important;
+	}
+}

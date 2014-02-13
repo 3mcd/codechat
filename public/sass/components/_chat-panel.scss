@@ -1,0 +1,17 @@
+.cc-ChatPanel {
+	flex: 4;
+	display: flex;
+	background: #fff;
+	transition: all 0.2s ease-out;
+}
+
+.cc-ChatPanel-users {
+	overflow: auto;
+	width: 125px;
+}
+
+.cc-ChatPanel-conversation {
+	flex: 8;
+	overflow: auto;
+	font-size: 85%;
+}

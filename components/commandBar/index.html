@@ -1,0 +1,11 @@
+<commandBar:>
+	<div class="cc-CommandBar">
+		<form class="cc-CommandBar-form Form Form--inline" x-bind="submit:postMessage">
+			<input class="cc-CommandBar-input cc-CommandBar-user Form-input" type="text" value="{_page.user.name}" placeholder="Username"
+			><input x-as="commandline" class="cc-CommandBar-command cc-UserColorBar cc-UserColorBar--{_page.user.userColor} Form-input" type="text" value="{_page.newComment}" placeholder="Chat or type a command"
+			><input class="cc-CommandBar-submit Button" type="submit" value="Say"
+			>
+			<input class="cc-CommandBar-submit Button" type="button" x-bind="click:modal.commandDialog.show" value="Commands">
+			<input class="cc-CommandBar-submit Button" type="button" x-bind="click:modal.keybindingsDialog.show" value="Keybindings">
+		</form>
+	</div>

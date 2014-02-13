@@ -1,104 +1,171 @@
 <Head:>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/base.css" />
-  <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="/bower_components/jquery/jquery.min.js"></script>
 
 <Header:>
-  <body>
-  <div class="CodeChat Arrange">
-    <div class="CodeChat-main Arrange-sizeFill">
-          <ui:connectionAlert>
-          <header class="Header">
-            <div class="Header-nav">
-              <!-- Other templates are included like HTML elements -->
-              <app:navLink title="Home" href="/">
-              <app:navLink title="Lobby" href="/codechat">
-              <a x-bind="click:modal.commandDialog.show">Commands</a>
-              <cc:classButton class="codeToggle" data-target="CodeChat-codeArea" data-target-class="js-codeArea" data-class="js-navActive">
-              <form x-bind="submit: changeRoom">
-                <input value="{_page.newRoom}" class="Header-search UserColorBar--{_page.user.userColor}" placeholder="Current room: '{_page.room}'">
-              </form>
-            </div>
-          </header>
+	<body>
+		<div class="cc-CodeChat">
+			<div class="cc-CodeChat-main">
+				<ui:connectionAlert>
+				<header class="cc-Header">
+					<div class="cc-Header-nav">
+						<!-- Other templates are included like HTML elements -->
+						<app:navLink title="Home" href="/">
+						<app:navLink title="Lobby" href="/codechat">
+						<cc:classButton class="codeToggle" target="cc-CodeChat-editor" target-class="js-flex-2" my-class="js-navActive" title="Code ' / '">
+					</div>
+					<div class="cc-Header-form Form Form--inline">
+						<form x-bind="submit: changeRoom" class="cc-UserColorBar cc-UserColorBar--{_page.user.userColor}">
+							<input value="{_page.newRoom}" placeholder="Current room: '{_page.room}'">
+						</form>
+					</div>
+				</header>
 
 <Body:>
-      <cc:chatPanel messages="{_page.messages}">
-      <cc:codeWindow room="{_page.room}" localrefresh="{_page.refresh}" globalrefresh="{_page.code.refresh}">
-<Footer:>
-      <footer class="Footer">
-        <cc:dataBar>
-      </footer>
-</div>
-<div class="CodeChat-code Arrange-sizeFit">
-      <!-- Need to change this to it's own CodeArea component -->
-      <div class="CodeChat-codeArea UserColorBar--{_page.user.userColor}">
-        <cc:codeArea title="CSS" path="{_page.code.css}">
-        <cc:codeArea title="HTML" path="{_page.code.html}">
-        <cc:codeArea title="JS" path="{_page.code.js}">
-      </div>
-    </div>
-</div>
+				<cc:chatPanel messages="{_page.messages}">
+				<cc:codePanel room="{_page.room}" localrefresh="{_page.refresh}" globalrefresh="{_page.code.refresh}">
+
+				<footer class="cc-Footer">
+					<cc:commandBar>
+				</footer>
+			</div>
+			<cc:editor>
+		</div>
 
 <Scripts:>
-  <script src="/bower_components/jquery/jquery.min.js"></script>
-  <script>
-    var codeToggle = function() {
-      $('.codeToggle').toggleClass('js-navActive');
-      $('.CodeChat-codeArea').toggleClass('js-codeArea');
-    };
-    $('.CodeChat-codeArea > textarea').focus(function() {
-      $('.codeToggle').addClass('js-navActive');
-      return $('.CodeChat-codeArea').addClass('js-codeArea');
-    });
-    $(window).keydown(function(e) {
-      if (e.which == '220' && !($("input, textarea").is(":focus"))) {
-        e.preventDefault();
-        return codeToggle();
-      } else if(e.which == '191' && !($("input, textarea").is(":focus"))) {
-        e.preventDefault();
-        return $('.DataBar-comment').focus();
-      }
-    });
-    $(document).delegate('.js-codeArea > textarea', 'keydown', function(e) {
-      var keyCode = e.keyCode || e.which;
-      if (keyCode == 9) {
-        e.preventDefault();
-        var start = $(this).get(0).selectionStart;
-        var end = $(this).get(0).selectionEnd;
-        $(this).val($(this).val().substring(0, start)
-                    + "    " 
-                    + $(this).val().substring(end));
-        $(this).get(0).selectionStart =
-        $(this).get(0).selectionEnd = start + 4;
-      }
-    });
-  </script>
+		<script>
+		var cc = {};
+		cc.state = {
+			chatPanel: false, 
+			codePanel: false, 
+			editor: false,
+			flip: function(ui) {
+				if (this.hasOwnProperty(ui) && typeof this[ui] == 'boolean') {
+					return this[ui] = !this[ui];
+				}
+			}
+		};
+		$(document).ready(function(){
+			$(window).keydown(function(e){
+				if (!($("input, textarea").is(":focus")))
+				{
+					if (e.which == 191) {
+						e.preventDefault();
+						$('.cc-CodeChat-editor')
+							.toggleClass('js-flex-2');
+						cc.state.flip('editor');
+					} else if (e.which == 188 && !cc.state.codePanel) {
+						e.preventDefault();
+						$('.cc-ChatPanel')
+							.siblings()
+							.not('.cc-Footer')
+							.toggleClass('js-flex-0')
+							.toggleClass('visuallyhidden');
+						cc.state.flip('chatPanel');
+					} else if (e.which == 190 && !cc.state.chatPanel) {
+						e.preventDefault();
+						$('.cc-CodePanel')
+							.siblings()
+							.not('.cc-Footer')
+							.toggleClass('js-flex-0')
+							.toggleClass('visuallyhidden');
+						cc.state.flip('codePanel');
+					} else if (e.which == 13) {
+						e.preventDefault();
+						$('.cc-CommandBar-command').focus();
+					}
+				}
+			});
+		});
+		</script>
 
 <navLink:>
-  <a class="{{#if equal($url, @href)}}active{{/}}" href="{{@href}}">{{@title}}</a>
+	<a class="{{#if equal($url, @href)}}active{{/}}" href="{{@href}}">{{@title}}</a>
+
+<ui2:modal bind="create:modal.create" name="keybindingsDialog" keydown>
+	<div class="cc-Modal">
+		<h2 class="cc-Modal-header">CodeChat keybindings</h2>
+		<p>You must not have an input or the code panel in focus when using these keybindings.</p>
+		<ul>
+			<li><b>' / '</b> - Code Editor</li>
+			<li><b>' . '</b> - Expand Code Panel</li>
+			<li><b>' , '</b> - Expand Chat Panel</li>
+			<li><b>' Enter '</b> - Focus Command Input</li>
+		</ul>
+		<p>Hit 'ESC' to close this window.</p>
+	</div>
+</ui2:modal>
 
 <ui2:modal bind="create:modal.create" name="commandDialog" keydown>
-  <h2>codechat commands</h2>
-  <br>
-  <h3>/room <em>[name]</em></h3>
-  <p>Navigate to a room.</p>
-  <br>
-  <h3>/users <em>[room]</em></h3>
-  <p>List all users in current room or a room of choice.</p>
-  <br>
-  <h3>/refresh <em>[all]</em></h3>
-  <p>Refresh code in the code window. Use this command after making script changes, if code is rendering improperly, or running <em>/empty</em>.</p>
-  <br>
-  <h3>/empty</h3>
-  <p>Empty code in the current room.</p>
-  <br>
-  <h3>/color <em>[0-9]</em></h3>
-  <p>Change your user color.</p>
-  <br>
-  <h3>/sever <em>"string"</em></h3>
-  <p>Add a user-less server message to the current room.</p>
-  <br>
-  <b>Hit 'ESC' to close this window.</b>
+	<div class="cc-Modal">
+		<h2 class="cc-Modal-header">CodeChat commands</h2>
+		<ul>
+			<li>Enter in the command input.</li>
+			<li>Prefix with '.' or '/'.</li>
+			<li>Brackets denote optional parameters.</li>
+		</ul>
+		<div class="cc-Modal-command">
+			<h3>about</h3>
+			<p>Learn more about codechat.</p>
+		</div>
+		<div class="cc-Modal-command">
+			<h3>room <em>name</em></h3>
+			<p>Navigate to a room.</p>
+		</div>
+		<div class="cc-Modal-command">
+			<h3>users [<em> room </em>]</h3>
+			<p>List all users in current room or a room of choice.</p>
+		</div>
+		<div class="cc-Modal-command">
+			<h3>start <em> package,... </em></h3>
+			<p>Starts a basic project in the room with specified packages. Currently supports:</p>
+			<ul>
+				<li>
+					<b>Popular libraries</b>
+					<ul>
+						<li><em>'jquery':</em> jQuery</li>
+						<li><em>'zepto':</em> zepto.js</li>
+						<li><em>'three':</em> three.js</li>
+						<li><em>'normalize':</em> Normalize.css</li>
+					</ul>
+					<b>Basic templates</b>
+					<ul>
+						<li><em>'layout':</em> adds a container div wrapping an HTML5 header and footer</li>
+						<li><em>'canvas':</em> simply appends a canvas element to the HTML</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="cc-Modal-command">
+			<h3>refresh [<em> all </em>]</h3>
+			<p>Refresh code in the code window. Use this command after making script changes, if code is rendering improperly, or running <em>/empty</em>.</p>
+		</div>
+		<div class="cc-Modal-command">
+			<h3>empty <em> code </em> | <em> chat </em></h3>
+			<p>Empty code or chat in the current room.</p>
+		</div>
+		<div class="cc-Modal-command">
+			<h3>color <em>0-9</em></h3>
+			<p>Change your user color.</p>
+		</div>
+		<div class="cc-Modal-command">
+			<h3>sever <em>"string"</em></h3>
+			<p>Add a user-less server message to the current room.</p>
+		</div>
+		<p>Hit 'ESC' to close this window.</p>
+	</div>
+</ui2:modal>
+
+<ui2:modal bind="create:modal.create" name="aboutDialog" keydown>
+	<div class="cc-Modal">
+		<h2 class="cc-Modal-header">About CodeChat</h2>
+		<p>CodeChat is a collaborative chat application with a real time code interface built with Derby JS and SUIT CSS components.</p>
+		<p>The intent of this application is to provide a live coding environment for web developers to use to collaborate with peers, teachers to instruct students on the fundamentals of web design, and a place for anyone to store and share web design examples.</p>
+		<p>The current state of this project is extremely shoddy and really shouldn't be used for anything other than testing and playing around. Type '/commands' to see a list of all of the commands.</p>
+		<b>Hit 'ESC' to close this window.</b>
+	</div>
 </ui2:modal>

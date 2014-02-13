@@ -1,0 +1,54 @@
+.cc-CommandBar {
+	height: 100%;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	background: #000;
+}
+
+.cc-CommandBar-form {
+	height: 100%;
+	color: #000;
+}
+
+.cc-CommandBar-form > input {
+	border: 0;
+	height: 100%;
+	background: #f6f6f6;
+	font-size: 100% !important;
+}
+
+.cc-CommandBar-form > input:hover {
+	background: #fff;
+}
+
+.cc-CommandBar-form > input:focus {
+	background: #fff;
+}
+
+.cc-CommandBar-user {
+	width: 125px;
+}
+
+.cc-CommandBar-command {
+	-webkit-box-shadow: inset 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    inset 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+	box-shadow:         inset 0px 2px 5px 0px rgba(50, 50, 50, 0.25);
+	width: 300px;
+}
+
+.cc-CommandBar-submit {
+	color: #333;
+	background-color: #fff;
+	border-left: 1px solid #ccc !important;
+	width: auto;
+}
+
+.cc-CommandBar-submit:hover {
+	color: #222;
+	background: #e6e6e6;
+}
+
+.cc-CommandBar-submit:active {
+	color: #111;
+	background: #bbb;
+}

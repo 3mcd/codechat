@@ -1,0 +1,63 @@
+*, *:before, *:after { box-sizing: border-box; }
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+input:focus,
+textarea:focus {
+	outline: 0;
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 8px;
+    background-color:rgba(0,0,0,0.1);
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background-color:rgba(0,0,0,0.1);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.5); 
+    border-radius: 3px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.7); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0,0,0,0.3); 
+}
+
+.visuallyhidden {
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px;
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px;
+}
+
+.js-flex-0 {
+	transition: all 0.2s ease-out;
+	flex: 0 !important;
+}
+
+.js-flex-2 {
+	transition: all 0.2s ease-out;
+	flex: 2 !important;
+}

@@ -30,7 +30,6 @@
     "commit": "609f7662a2a7090c21ddd2ffe81602b744ea5a39"
   },
   "_source": "git://github.com/suitcss/suit.git",
-  "_target": "~0.3.0",
-  "_originalSource": "suit",
-  "_direct": true
+  "_target": "*",
+  "_originalSource": "suit"
 }
