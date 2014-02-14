@@ -56,8 +56,8 @@ Refresh the code window for yourself or all users in the room.
 
 ex: `/refresh all` will refresh the code for all users in the current room. This is necessary after script updates or if your code is rendering improperly.
 
-####empty (code|chat)
-Empty the code or chat messages in the current room.
+####empty (code(type)|chat)
+Empty the code or chat messages in the current room. Can pass `html`, `css` or `js` to empty a specific type of code.
 
 ex: `/empty code` will set all of your code containers to an empty string.
 
