@@ -1,6 +1,5 @@
 #codechat
 
-![codechat ui](http://www.ericmcd.com/blog/img/codechat-new.jpg) 
 
 ***
 
