@@ -36,11 +36,17 @@ ex. `/users lobby` would output the users in the room 'lobby'.
 Set up a template for your new project using specified packages. Currently supports:
 
 'jquery': jQuery
+
 'zepto': zepto.js
+
 'three': three.js
+
 'normalize': Normalize.css
+
 'layout': adds a container div wrapping an HTML5 header and footer
+
 'canvas': simply appends a canvas element to the HTML
+
 
 If left blank, this command will generate a project with empty `<style>`, `<script>` and `<div>` tags in the respective containers.
 
