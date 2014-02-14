@@ -59,7 +59,7 @@ ex: `/refresh all` will refresh the code for all users in the current room. This
 ####empty (code(type)|chat)
 Empty the code or chat messages in the current room. Can pass `html`, `css` or `js` to empty a specific type of code.
 
-ex: `/empty code` will set all of your code containers to an empty string.
+ex: `/empty code` will set all of your code containers to an empty string. 
 
 ####color (num)
 Change your user color. Accepts values from 0-10.
