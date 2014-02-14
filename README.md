@@ -47,10 +47,9 @@ Set up a template for your new project using specified packages. Currently suppo
 
 'canvas': simply appends a canvas element to the HTML
 
-
-If left blank, this command will generate a project with empty `<style>`, `<script>` and `<div>` tags in the respective containers.
-
 ex: `/start jquery normalize` will append a jQuery CDN script tag in the script container and a Normalize CDN link tag in the style container. After the project is started the code is automatically refreshed. 
+
+#####Note: if left blank, this command will generate a project with empty `<style>`, `<script>` and `<div>` tags in the respective containers.
 
 ####refresh [all]
 Refresh the code window for yourself or all users in the room.
