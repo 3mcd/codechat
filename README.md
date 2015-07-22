@@ -4,15 +4,13 @@ Note: this package is no longer maintained and may or may not work properly.
 
 In order to set this project up you will need the dependencies for Derby including Redis and MongoDB.
 
-#####Note: there is a bug currently that sometimes prevents you from going to new rooms from the command line/room input. If you experience this, you can simply go the the URL localhost:3000/codechat/{room} in your browser.
-
-##Install
+###Install
 
 Clone into a directory and run: `npm install`, `npm start`
 
 Navigate to localhost:3000/ to access the client application.
 
-##Commands
+###Commands
 
 Type commands in the command bar in the footer. You must prefix a command with . or /
 
@@ -69,7 +67,7 @@ Echo a userless server message to the current room.
 
 ex: `/server "There really is no need for this command"` would emit "There really is no need for this command" to the current room.
 
-##Keybindings
+###Keybindings
 
 ' / '     - Reveal Code Editor
 
