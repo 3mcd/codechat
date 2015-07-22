@@ -1,9 +1,6 @@
 #codechat
-###A collaborative chat application with a real time code interface built with Derby JS and SUIT CSS components.
 
-***
-![codechat ui](http://www.ericmcd.com/blog/img/codechat-new-1.jpg) 
-***
+Note: this package is no longer maintained and may or may not work properly.
 
 In order to set this project up you will need the dependencies for Derby including Redis and MongoDB.
 
